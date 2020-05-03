@@ -1,2 +1,9 @@
+type Query {
+  me : Me
+}
 
+type Me {
+  name : String!
+  role : String!
+}
 

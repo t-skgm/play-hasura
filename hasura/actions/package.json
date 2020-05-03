@@ -1,0 +1,17 @@
+{
+  "name": "play-hasura-actions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "scripts": {
+    "develop": "now dev",
+    "deploy": "now"
+  },
+  "dependencies": {
+    "@now/node": "1.3.4",
+    "node-fetch": "2.6.0"
+  },
+  "devDependencies": {
+    "now": "18.0.0"
+  }
+}

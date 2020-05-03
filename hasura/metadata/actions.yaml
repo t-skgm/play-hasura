@@ -1,6 +1,14 @@
-actions: []
+actions:
+- name: me
+  definition:
+    kind: ""
+    handler: https://play-hasura-actions.skgm0301.now.sh/me
+    forward_client_headers: true
+  permissions:
+  - role: owner
 custom_types:
   enums: []
   input_objects: []
-  objects: []
+  objects:
+  - name: Me
   scalars: []
