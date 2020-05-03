@@ -4,11 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node --transpile-only ./src/index.ts",
-    "dev": "ts-node-dev --respawn --transpileOnly ./src/index.ts"
+    "start": "ts-node -r tsconfig-paths/register --transpile-only ./src/index.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpileOnly ./src/index.ts"
   },
   "dependencies": {
+    "apollo-server": "2.12.0",
     "express": "4.17.1",
+    "graphql": "14.6.0",
     "graphql-typed-client": "1.7.4"
   },
   "devDependencies": {

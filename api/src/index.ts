@@ -1,6 +1,6 @@
 import express from 'express'
-import { createClient } from './hasuraClient/createClient'
-import { createFetcher } from './utils/createFetcher'
+import { createClient } from '@/hasuraClient/createClient'
+import { createFetcher } from '@/utils/createFetcher'
 
 const PORT = 3000
 const endpoint = 'http://localhost:8080/v1/graphql'
