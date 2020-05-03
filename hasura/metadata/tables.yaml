@@ -10,6 +10,33 @@
           name: users
         column_mapping:
           user_id: id
+  insert_permissions:
+  - role: owner
+    permission:
+      check: {}
+      columns:
+      - completedAt
+      - title
+      - user_id
+      backend_only: false
+  select_permissions:
+  - role: owner
+    permission:
+      columns: []
+      filter: {}
+  update_permissions:
+  - role: owner
+    permission:
+      columns:
+      - completedAt
+      - title
+      - user_id
+      filter: {}
+      check: null
+  delete_permissions:
+  - role: owner
+    permission:
+      filter: {}
 - table:
     schema: public
     name: users
