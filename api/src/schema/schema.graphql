@@ -1,0 +1,32 @@
+scalar DateTime
+
+type Query {
+  user(where: WhereUniqueInput!): User
+  users: [User!]!
+  todo(where: WhereUniqueInput!): Todo
+  todos: [Todo!]!
+}
+
+type Todo {
+  id: ID!
+  title: String!
+  completedAt: DateTime
+
+  created_at: DateTime
+  updated_at: DateTime
+
+  user: User
+}
+
+type User {
+  id: ID!
+  name: String!
+  created_at: DateTime
+  updated_at: DateTime
+
+  todos: [Todo!]!
+}
+
+input WhereUniqueInput {
+  id: ID!
+}

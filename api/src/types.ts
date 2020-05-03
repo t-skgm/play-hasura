@@ -1,5 +1,5 @@
-import { createClient } from '@/hasuraClient/createClient'
+import { createClient } from '@/generated/hasuraClient/createClient'
 
 export type Context = {
-  db: ReturnType<typeof createClient>
+  client: ReturnType<typeof createClient>
 }
