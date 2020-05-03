@@ -21,7 +21,7 @@ services:
       ## uncomment next line to set an admin secret
       # HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
     volumes:
-    - "./migrations:/hasura-migrations"
-    - "./metadata:/hasura-metadata"
+    - "./hasura/migrations:/hasura-migrations"
+    - "./hasura/metadata:/hasura-metadata"
 volumes:
   db_data:
