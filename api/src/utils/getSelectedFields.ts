@@ -6,7 +6,7 @@ type FieldRecord = Record<string, any>
 const spreadSelectionSet = (selectionSet: SelectionSetNode | undefined): FieldRecord => {
   if (!selectionSet) return {}
 
-  return selectionSet.selections.reduce((acc, sel) => {
+  return selectionSet.selections.reduce<FieldRecord>((acc, sel) => {
     if (sel.kind !== 'Field') return acc
 
     if (sel.selectionSet) {
@@ -16,15 +16,13 @@ const spreadSelectionSet = (selectionSet: SelectionSetNode | undefined): FieldRe
 
     acc[sel.name.value] = 1
     return acc
-  }, {} as any)
+  }, {})
 }
 
-export const getSelectedFields = (info: GraphQLResolveInfo): Record<string, FieldRecord> =>{
+export const getSelectedFields = (info: GraphQLResolveInfo): Record<string, FieldRecord> => {
   const nodes = info.fieldNodes.map(n => [
     n.name.value,
     spreadSelectionSet(n.selectionSet)
   ])
   return Object.fromEntries(nodes)
 }
-
-export const selectFields = (info: GraphQLResolveInfo) => getSelectedFields(info)

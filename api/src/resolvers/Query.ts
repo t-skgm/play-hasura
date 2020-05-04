@@ -1,5 +1,5 @@
 import { QueryResolvers } from '@/generated/graphql'
-import { getSelectedFields } from '@/utils/graphql'
+import { getSelectedFields } from '@/utils/getSelectedFields'
 
 export const Query: QueryResolvers = {
   user: async (_root, { where }, ctx, info) => {

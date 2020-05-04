@@ -1,5 +1,5 @@
 import { UserResolvers } from '@/generated/graphql'
-import { getSelectedFields } from '@/utils/graphql'
+import { getSelectedFields } from '@/utils/getSelectedFields'
 
 export const User: UserResolvers = {
   todos: async (parent, _args, ctx, info) => {
