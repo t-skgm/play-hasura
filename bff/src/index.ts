@@ -9,8 +9,6 @@ import { createFetcher } from '@/utils/createFetcher'
 const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000
 const GRAPHQL_ENGINE_URL = process.env.GRAPHQL_ENGINE_URL ?? 'http://localhost:8080/v1/graphql'
 
-console.log('GRAPHQL_ENGINE_URL', GRAPHQL_ENGINE_URL)
-
 const main = async () => {
   const client = createClient({ fetcher: createFetcher(GRAPHQL_ENGINE_URL) })
 

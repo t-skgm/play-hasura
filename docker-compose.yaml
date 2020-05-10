@@ -23,5 +23,20 @@ services:
     volumes:
     - "./hasura/migrations:/hasura-migrations"
     - "./hasura/metadata:/hasura-metadata"
+  bff:
+    build:
+      context: ./bff
+      dockerfile: docker_configs/develop.Dockerfile
+    image: bff-play-hasura
+    tty: true
+    stdin_open: true
+    environment:
+      GRAPHQL_ENGINE_URL: http://graphql-engine:8080/v1/graphql
+      TZ: Asia/Tokyo
+    ports:
+     - "3000:3000"
+    volumes:
+      - ./bff:/usr/app
+      - /usr/app/node_modules/
 volumes:
   db_data:

@@ -1,0 +1,5 @@
+node_modules/
+dist/
+docker_configs/
+.vscode/
+.git/
