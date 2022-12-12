@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "apollo-server": "2.12.0",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "graphql": "14.6.0",
     "graphql-import": "^1.0.2",
     "graphql-typed-client": "1.7.4",
